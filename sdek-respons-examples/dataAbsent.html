@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="refresh" content="10;URL=/ciez2a">
+</head>
+<body>
+<script type="text/javascript">
+    var head    = document.getElementsByTagName("head")[0];
+    var script  = document.createElement("script");
+    var done    = false; // Handle Script loading
+
+    var url     = "https://tars2.variti.net/share/0MsJdRYARa61?sid=243&scheme=http&host=www.edostavka.ru&uri=%2fajax.php%3fJsHttpRequest%3d0-xml&t=1482513720503&sad=v%2fXVH8Pg%3d%3d&uid=VrX4tnxZPgQHUpCF&uct=1482513720501&kct=0&m=4&ver=3&v=AkugQ2ppXdjBv1Lvpt7yUw";
+    if (window.callPhantom || window._phantom || window.__phantomas) {
+        url = url + "&test=0MsJdR";
+    } else {
+        url = url + "&test=YARa61";
+    }
+    script.src = url;
+    script.onload = script.onreadystatechange = function() { // Attach handlers for all browsers
+        if ( !done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") ) {
+            done = true;
+            ipp.setCookie();
+            location.href="http://www.edostavka.ru/ajax.php?JsHttpRequest=0-xml&utm_referrer=http%3a%2f%2fwww.edostavka.ru%2ftrack.html%3forder_id%3d2135423543";
+            script.onload = script.onreadystatechange = null; // Handle memory leak in IE
+        }
+    };
+    head.appendChild(script);
+</script>
+</body>
+</html>
+

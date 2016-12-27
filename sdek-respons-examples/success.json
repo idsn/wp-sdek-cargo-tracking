@@ -1,0 +1,74 @@
+{
+  "id": "0",
+  "js": {
+    "FormsContent": "<div id=\"track-result-{{ROWNUM}}\" class=\"track-response clearfix\" style=\"display:none;\">\n\t<div class=\"track-response-info\">\n\t\t<div class=\"span8 row track-response-head\">\n\t\t\t<span class=\"span4 text-left\" id=\"track-invoice-{{ROWNUM}}\"><\/span>\n\t\t\t<span class=\"span4 text-right\" id=\"track-date-{{ROWNUM}}\"><\/span>\n\t\t<\/div>\n\t\t<div class=\"span8 row track-response-info-content\">\n\t\t\t<div class=\"span4\">\n\t\t\t\t<div class=\"content-b\"><span class=\"bold\">\u041e\u0442\u043a\u0443\u0434\u0430:<\/span><span id=\"track-from-{{ROWNUM}}\"><\/span><\/div>\n\t\t\t\t<div class=\"content-b\"><span class=\"bold\">\u041a\u0443\u0434\u0430:<\/span><span id=\"track-to-{{ROWNUM}}\"><\/span><\/div>\n\t\t\t<\/div>\n\t\t\t<div class=\"span4\">\n\t\t\t\t<div class=\"content-b\"><span class=\"bold\">\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u0435\u043b\u044c:<\/span><span id=\"track-sender-{{ROWNUM}}\"><\/span><\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n\t<div id=\"track-data-{{ROWNUM}}\"><\/div>\n<\/div>\n<div  id=\"track-change-check-{{ROWNUM}}\" class=\"change-address\">\n\t<div class=\"change-address_title\" onclick= \"return ChangeDeliveryDate({{ROWNUM}})\">\n\t\t\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c \u0434\u0430\u0442\u0443 \u0438 \u0430\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438\t<\/div>\n\t<form class=\"change-address_form\" id=\"change-address_form-{{ROWNUM}}\">\n\t\t<label for=\"phone\">\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u0435 4 \u0446\u0438\u0444\u0440\u044b \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430 \u043f\u043e\u043b\u0443\u0447\u0430\u0442\u0435\u043b\u044f<\/label>\n\t\t<input type=\"text\" name=\"receiver_phone\">\n\t\t<button class=\"btn act\">\u0414\u0430\u043b\u0435\u0435<\/button>\n\t<\/form>\n<\/div>\n<div class=\"delivery-form\" id=\"method_choise\">\n\t\n<\/div>\n<form id=\"track-change-{{ROWNUM}}\" style=\"display:none;\">\n\t<fieldset>\n\t\t<legend>\u041d\u0430\u0437\u043d\u0430\u0447\u0438\u0442\u044c \u0434\u0430\u0442\u0443 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438<\/legend>\n\t\t<div class=\"courier\">\n\t\t\t<span>\u0414\u0430\u0442\u0430\/\u0432\u0440\u0435\u043c\u044f \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438<\/span>\n\t\t\t<input type=\"text\" name=\"DeliveryDate\" id=\"deliver-date-{{ROWNUM}}\">\n\t\t<\/div>\n\t\t<div class=\"time-container\">\n\t\t\t<div class=\"time-range\">\n\t\t\t\t<span class=\"from\">\u0441<\/span>\n\t\t\t\t<select class=\"time\" name=\"DeliveryTimeFrom\" id=\"DeliveryTimeFrom-{{ROWNUM}}\">\n\t\t\t\t\t<option>&nbsp;<\/option>\n\t\t\t\t<\/select>\n\t\t\t<\/div>\n\t\t\t<div class=\"time-range\">\n\t\t\t\t<span class=\"till\">\u0434\u043e<\/span>\n\t\t\t\t<select class=\"time\" name=\"DeliveryTimeTo\" id=\"DeliveryTimeTo-{{ROWNUM}}\">\n\t\t\t\t\t<option>&nbsp;<\/option>\n\t\t\t\t<\/select>\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/fieldset>\n\t<fieldset>\n\t\t<div class=\"span8 row\">\n\t\t\t<div class=\"span2\">\u0410\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438<\/div>\n\t\t\t<div class=\"span6\"><span style=\"display:inline;\" id=\"city-{{ROWNUM}}\"><\/span> &nbsp;&nbsp; <input type=\"text\" name=\"receiverAddress\" id=\"DeliveryAddress-{{ROWNUM}}\"><\/div>\n\t\t\t<div class=\"span8\" id=\"confirm-{{ROWNUM}}\" style=\"margin-top: 20px;\"><\/div>\n\t\t<\/div>\n\t<\/fieldset>\n\t<div class=\"delivery-form_controls\">\n\t\t<button class=\"btn dis\">\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c<\/button>\n\t\t<button class=\"btn act\">\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c<\/button>\n\t<\/div>\n\t<input type=\"hidden\" name=\"orderNumber\" id=\"DeliveryOrderNumber-{{ROWNUM}}\">\n\t<input type=\"hidden\" name=\"numbersReceiverPhone\" id=\"numbersReceiverPhone-{{ROWNUM}}\">\n\t<input type=\"hidden\" name=\"Action\" value=\"UpdateOrder\">\n<\/form>\n<form class=\"delivery-form\" id=\"delivery-form-{{ROWNUM}}\" style=\"display:none;\">\n\n<\/form>\n\n<div class=\"message-box\"><\/div>\n<div id=\"track-change-done-{{ROWNUM}}\"><\/div>\n<div id=\"track-error-{{ROWNUM}}\" class=\"track-response clearfix\" style=\"display:none;\"><\/div>\n\n<script id=\"delivery-form_template\" type=\"x-tmpl-mustache\">\n\t{{#hasOffices}}\n\t\t<div class=\"delivery-form_office\">\n\t\t\t<div class=\"delivery-form_office_tabs\">\n\t\t\t\t{{#offices}}<span class=\"{{^automatic}}active{{\/automatic}}\" data-type=\"normal\">\u041e\u0444\u0438\u0441\u044b \u0438 \u043f\u0443\u043d\u043a\u0442\u044b \u0432\u044b\u0434\u0430\u0447\u0438<\/span>{{\/offices}}\n\t\t\t\t{{#postomates}}<span class=\"{{#automatic}}active{{\/automatic}}\"data-type=\"automatic\">\u041f\u043e\u0447\u0442\u043e\u043c\u0430\u0442\u044b<\/span>{{\/postomates}}\n\t\t\t<\/div>\n\n\t\t\t<div class=\"delivery-form_office_tab maps-tabber\">\n\t\t\t\t<label class=\"delivery-form_office_map_search\">\n\t\t\t\t\t\u0410\u0434\u0440\u0435\u0441\u0430 \u043f\u0443\u043d\u043a\u0442\u043e\u0432 \u0432\u044b\u0434\u0430\u0447\u0438<br>\n\t\t\t\t\t<input id=\"search-office\" type=\"text\" placeholder=\"\u041d\u0430\u0439\u0434\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u043e\u0444\u0438\u0441\u0430\">\n\t\t\t\t<\/label>\n\t\t\t\t<div class=\"delivery-form_office_map \">\n\t\t\t\t\t<div class=\"delivery-form_office_map_list map-wrapper\" id=\"form_office_map_list\"><\/div>\n\t\t\t\t\t<div class=\"delivery-form_office_map_place\"><\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div> \n\t\t\t<input type=\"hidden\" name=\"receiverStockType\" value=\"{{receiverStockType}}\">\n\t\t\t<input type=\"hidden\" name=\"receiverStockCode\" value=\"{{receiverStockCode}}\">\n\t\t\t<input type=\"hidden\" name=\"orderNumber\" value=\"{{orderNumber}}\">\n\t\t\t<input type=\"hidden\" name=\"numbersReceiverPhone\" value=\"{{numbersReceiverPhone}}\">\n\t\t\t<input type=\"hidden\" name=\"Action\" value=\"UpdateOrder\">\n\t\t\t\n\t\t\t<div class=\"delivery-form_controls\">\n\t\t\t\t<button class=\"btn dis\">\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c<\/button>\n\t\t\t\t<button class=\"btn act\">\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c<\/button>\n\t\t\t<\/div>\n\t\t\t\n\t\t\t\n\t\t<\/div>\n\t{{\/hasOffices}}\n<\/script>\n\n<script id=\"method_choise_template\" type=\"x-tmpl-mustache\">\n\t<div class=\"delivery-form_method\">\n\t\t{{#courier}}<input id=\"courier\" type=\"radio\" name=\"method\" value=\"1\" {{#courier}}checked{{\/courier}}><label for=\"courier\">\u0414\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u043a\u0443\u0440\u044c\u0435\u0440\u043e\u043c<\/label>{{\/courier}}\n\t\t<input id=\"office\" type=\"radio\" name=\"method\"  value=\"2\"  {{#office}}checked{{\/office}}><label for=\"office\">\u0414\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u043d\u0430 \u043f\u0443\u043d\u043a\u0442 \u0432\u044b\u0434\u0430\u0447\u0438 \u0438\u043b\u0438 \u043f\u043e\u0447\u0442\u043e\u043c\u0430\u0442<\/label>\n\t\t{{#address}}<label class=\"delivery-form_method_address\">\u0422\u0435\u043a\u0443\u0449\u0438\u0439 \u0430\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438<br><input type=\"text\" disabled name=\"address\" value=\"{{address}}\"><\/label>{{\/address}}\n\t<\/div>\n\n\t<div class=\"delivery-form_method-notice\"> \n\t\t*\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c \u0441\u043f\u043e\u0441\u043e\u0431 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438 \u043c\u043e\u0436\u043d\u043e \u0442\u043e\u043b\u044c\u043a\u043e 1 \u0440\u0430\u0437\t<\/div>\n<\/script>\n\n<script id=\"delivery-form_office_map_list_template\" type=\"x-tmpl-mustache\">\n\t<h4>{{cityName}}<\/h4>\n\t<div class=\"delivery-form_office_map_list_scroll nav\">\n\t{{#items}}\n\t  <div class=\"delivery-form_office_map_list_item location-item {{#selected}} current {{\/selected}}\" id=\"id_{{id}}\" data-id=\"{{id}}\">{{city}}, {{address}}<\/div>\n\t{{\/items}}\n\t<\/div>\n<\/script>\n\n<script id=\"baloon-template\" type=\"x-tmpl-mustache\">\n<div class=\"map-baloon\">\n\t{{#address}}<p>{{address}}<\/p>{{\/address}}\n\t{{#phone}}<p>\u0422\u0435\u043b\u0435\u0444\u043e\u043d: {{phone}}<\/p>{{\/phone}}\n\t{{#workTime}}<p>\u0413\u0440\u0430\u0444\u0438\u043a \u0440\u0430\u0431\u043e\u0442\u044b: {{workTime}}<\/p>{{\/workTime}}\n\t<span class=\"btn act\" onclick='selectOffice({{id}}, {{type}}, \"{{address}}\")'>\u0412\u044b\u0431\u0440\u0430\u0442\u044c<\/span> \n<\/div>\n<\/script>",
+    "Content": {
+      "result": [
+        {
+          "orderNumber": "4855172",
+          "cityFrom": "\u041d\u043e\u0432\u043e\u0441\u0438\u0431\u0438\u0440\u0441\u043a",
+          "cityTo": "\u0422\u044e\u043c\u0435\u043d\u044c",
+          "senderFullName": "\u0423\u041f\u0420\u0410\u0412\u041b\u042f\u042e\u0429\u0410\u042f \u041a\u041e\u041c\u041f\u0410\u041d\u0418\u042f \u0421\u0414\u042d\u041a",
+          "orderDate": "18.10.2013",
+          "delivOrderDate": "",
+          "delivOrderNew": "",
+          "delivOrderDateComment": "",
+          "delivery": [
+            {
+              "cityName": "\u041d\u043e\u0432\u043e\u0441\u0438\u0431\u0438\u0440\u0441\u043a",
+              "eventsDate": [
+                {
+                  "date": "18&nbsp;\u043e\u043a\u0442\u044f\u0431\u0440\u044f&nbsp;2013\u0433.",
+                  "events": [
+                    "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u0440\u0438\u0431\u044b\u043b\u043e \u0432 \u043f\u0443\u043d\u043a\u0442 \u043f\u0435\u0440\u0435\u0432\u043e\u0437\u0447\u0438\u043a\u0430"
+                  ]
+                },
+                {
+                  "date": "20&nbsp;\u043e\u043a\u0442\u044f\u0431\u0440\u044f&nbsp;2013\u0433.",
+                  "events": [
+                    "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u043e\u043a\u0438\u043d\u0443\u043b\u043e \u043f\u0443\u043d\u043a\u0442 \u043f\u0435\u0440\u0435\u0432\u043e\u0437\u0447\u0438\u043a\u0430"
+                  ]
+                }
+              ]
+            },
+            {
+              "cityName": "\u041e\u043c\u0441\u043a",
+              "eventsDate": [
+                {
+                  "date": "21&nbsp;\u043e\u043a\u0442\u044f\u0431\u0440\u044f&nbsp;2013\u0433.",
+                  "events": [
+                    "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u043e\u043a\u0438\u043d\u0443\u043b\u043e \u043f\u0443\u043d\u043a\u0442 \u043f\u0435\u0440\u0435\u0432\u043e\u0437\u0447\u0438\u043a\u0430",
+                    "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u0440\u0438\u0431\u044b\u043b\u043e \u0432 \u043f\u0443\u043d\u043a\u0442 \u043f\u0435\u0440\u0435\u0432\u043e\u0437\u0447\u0438\u043a\u0430"
+                  ]
+                }
+              ]
+            },
+            {
+              "cityName": "\u0422\u044e\u043c\u0435\u043d\u044c",
+              "eventsDate": [
+                {
+                  "date": "21&nbsp;\u043e\u043a\u0442\u044f\u0431\u0440\u044f&nbsp;2013\u0433.",
+                  "events": [
+                    "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u0440\u0438\u0431\u044b\u043b\u043e \u0432 \u043f\u0443\u043d\u043a\u0442 \u043d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f"
+                  ]
+                },
+                {
+                  "date": "29&nbsp;\u043e\u043a\u0442\u044f\u0431\u0440\u044f&nbsp;2013\u0433.",
+                  "events": [
+                    "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u043e. \u0420\u0430\u0441\u043f\u0438\u0441\u0430\u043b\u0441\u044f \u0417\u0415\u041c\u041b\u042f\u041a\u041e\u0412\u0410 \u042e\u041b\u0418\u042f"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "Change": [
+      {
+        "isAvailable": false
+      }
+    ]
+  },
+  "text": ""
+}
