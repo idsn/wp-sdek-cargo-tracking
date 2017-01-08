@@ -1,5 +1,6 @@
 # wp-sdek-cargo-tracking
 Wordpress SDEK Cargo Tracking
+(Wordpress СДЭК Отслеживание груза)
 
 Отслеживание заказа для СДЭК.
 
